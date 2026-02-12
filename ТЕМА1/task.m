@@ -2,12 +2,9 @@ pkg load statistics
 
 MM = normrnd(10, 8, [5, 7])
 SR = mean(MM, 'all')
-SR = SR + 8
-more = MM > SR
-less = MM < SR
 
-MM(more) = more
-MM(less) = less
+MM(MM > SR + 8) = SR + 8
+MM(MM < SR - 8) = SR -8
 
 MMC = MM(:)
 MMC = sort(MMC, 'ascend')
