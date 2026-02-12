@@ -10,9 +10,10 @@ MMC = MM(:)
 MMC = sort(MMC, 'ascend')
 
 n = length(MMC)
-if mod(n, 2) == 0:
+if mod(n, 2) == 0
   median = (MMC(n/2) + MMC(n/2+1)) / 2
-else:
+else
   median = MMC((n+1)/2)
+end
 
 MM1 = log(MM)
